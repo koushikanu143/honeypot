@@ -52,5 +52,11 @@
         "ip": "127.0.0.1",
         "username": "karthik",
         "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
+    },
+    {
+        "time": "2026-03-16 22:39:46.011287",
+        "ip": "127.0.0.1",
+        "username": "root",
+        "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36 Edg/146.0.0.0"
     }
 ]
