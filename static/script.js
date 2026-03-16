@@ -11,6 +11,7 @@ async function loadLogs(){
         <th>Time</th>
         <th>IP</th>
         <th>Username</th>
+        <th>Password</th>
         <th>Browser</th>
         </tr>
     `
@@ -22,7 +23,8 @@ async function loadLogs(){
         row.insertCell(0).innerText = log.time
         row.insertCell(1).innerText = log.ip
         row.insertCell(2).innerText = log.username
-        row.insertCell(3).innerText = log.browser
+        row.insertCell(3).innerText = log.password
+        row.insertCell(4).innerText = log.browser
 
     })
 

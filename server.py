@@ -1,23 +1,21 @@
 from flask import Flask, request, render_template, jsonify
 import datetime
 import json
+import firebase_admin
+from firebase_admin import credentials, firestore
 
 app = Flask(__name__)
+
+# Initialize Firebase
+cred = credentials.Certificate("serviceAccount.json")
+firebase_admin.initialize_app(cred)
+db = firestore.client()
 
 LOG_FILE = "honeypot_logs.json"
 
 def save_log(data):
-
-    try:
-        with open(LOG_FILE) as f:
-            logs = json.load(f)
-    except:
-        logs = []
-
-    logs.append(data)
-
-    with open(LOG_FILE,"w") as f:
-        json.dump(logs,f,indent=4)
+    # Save to Firestore
+    db.collection('honeypot_logs').add(data)
 
 @app.route("/")
 def login_page():
@@ -27,6 +25,7 @@ def login_page():
 def trap():
 
     username = request.form.get("username")
+    password = request.form.get("password")
 
     ip = request.remote_addr
 
@@ -38,6 +37,7 @@ def trap():
         "time":time,
         "ip":ip,
         "username":username,
+        "password":password,
         "browser":browser
     }
 
@@ -47,13 +47,14 @@ def trap():
 
 @app.route("/logs")
 def logs():
-
-    try:
-        with open(LOG_FILE) as f:
-            logs=json.load(f)
-    except:
-        logs=[]
-
+    # Fetch from Firestore
+    logs_ref = db.collection('honeypot_logs')
+    docs = logs_ref.stream()
+    logs = []
+    for doc in docs:
+        log_data = doc.to_dict()
+        log_data['id'] = doc.id  # Include document ID if needed
+        logs.append(log_data)
     return jsonify(logs)
 
 @app.route("/admin")
