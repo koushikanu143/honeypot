@@ -1,0 +1,217 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.login-body {
+  min-height: 100vh;
+  font-family: "Consolas", "Courier New", monospace;
+  background:
+    radial-gradient(circle at top left, rgba(0, 255, 170, 0.08), transparent 30%),
+    radial-gradient(circle at bottom right, rgba(0, 170, 255, 0.08), transparent 30%),
+    #020406;
+  color: #e6fff7;
+  overflow: hidden;
+  position: relative;
+}
+
+.bg-grid {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 170, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 170, 0.06) 1px, transparent 1px);
+  background-size: 35px 35px;
+  mask-image: radial-gradient(circle at center, black 50%, transparent 95%);
+  z-index: 0;
+}
+
+.glow {
+  position: fixed;
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+}
+
+.glow-1 {
+  top: 60px;
+  left: 80px;
+  background: rgba(0, 255, 180, 0.12);
+}
+
+.glow-2 {
+  bottom: 60px;
+  right: 80px;
+  background: rgba(0, 180, 255, 0.12);
+}
+
+.login-wrapper {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 560px;
+  background: rgba(5, 10, 14, 0.88);
+  border: 1px solid rgba(0, 255, 170, 0.25);
+  border-radius: 24px;
+  padding: 36px;
+  box-shadow:
+    0 0 40px rgba(0, 255, 170, 0.08),
+    0 0 80px rgba(0, 170, 255, 0.06);
+  backdrop-filter: blur(14px);
+}
+
+.login-badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #7fffd4;
+  background: rgba(0, 255, 170, 0.08);
+  border: 1px solid rgba(0, 255, 170, 0.2);
+  margin-bottom: 18px;
+}
+
+.login-title {
+  font-size: 38px;
+  line-height: 1.1;
+  color: #ffffff;
+  margin-bottom: 12px;
+  text-shadow: 0 0 16px rgba(0, 255, 170, 0.18);
+}
+
+.login-subtitle {
+  color: #9fd8c8;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.terminal-box {
+  background: #010303;
+  border: 1px solid rgba(0, 255, 170, 0.18);
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.terminal-line {
+  color: #39ffb6;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.terminal-line:last-child {
+  margin-bottom: 0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input-label {
+  font-size: 13px;
+  color: #85f7d3;
+  margin-top: 4px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px 16px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 170, 0.18);
+  background: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  outline: none;
+  font-size: 15px;
+  transition: 0.25s ease;
+}
+
+.login-form input::placeholder {
+  color: #6e8d83;
+}
+
+.login-form input:focus {
+  border-color: #2effb8;
+  box-shadow: 0 0 0 3px rgba(46, 255, 184, 0.08);
+}
+
+.login-form button {
+  margin-top: 10px;
+  border: none;
+  border-radius: 18px;
+  padding: 15px 16px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #02140d;
+  background: linear-gradient(90deg, #2effb8, #36d9ff);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 10px 30px rgba(46, 255, 184, 0.2);
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+}
+
+.warning-text {
+  margin-top: 18px;
+  color: #ff7777;
+  font-size: 13px;
+  text-align: center;
+}
+
+/* Admin page styles */
+
+body {
+  background: #020406;
+  color: #dffff5;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+h2 {
+  text-align: center;
+  margin: 24px 0;
+  color: #46ffc2;
+  letter-spacing: 1px;
+}
+
+table {
+  width: 95%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  background: rgba(5, 10, 14, 0.92);
+  border: 1px solid rgba(0, 255, 170, 0.18);
+  box-shadow: 0 0 30px rgba(0, 255, 170, 0.05);
+}
+
+th,
+td {
+  border: 1px solid rgba(0, 255, 170, 0.15);
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+  vertical-align: top;
+}
+
+th {
+  color: #7effd2;
+  background: rgba(0, 255, 170, 0.06);
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}

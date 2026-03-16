@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cyber Secure Access</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body class="login-body">
+
+  <div class="bg-grid"></div>
+  <div class="glow glow-1"></div>
+  <div class="glow glow-2"></div>
+
+  <div class="login-wrapper">
+    <div class="login-card">
+      <div class="login-badge">SECURE NODE // HONEYPOT ACTIVE</div>
+
+      <h1 class="login-title">CYBER DEFENSE ACCESS</h1>
+      <p class="login-subtitle">
+        Restricted authentication panel for monitored system access.
+        All activity is tracked for security analysis.
+      </p>
+
+      <div class="terminal-box">
+        <div class="terminal-line">[SYSTEM] Intrusion monitoring enabled</div>
+        <div class="terminal-line">[STATUS] Threat logging: ACTIVE</div>
+        <div class="terminal-line">[ALERT] Unauthorized access attempts are recorded</div>
+      </div>
+
+      <form action="/trap" method="POST" class="login-form">
+        <label class="input-label">Operator ID</label>
+        <input name="username" type="text" placeholder="Enter operator ID" required />
+
+        <label class="input-label">Security Passkey</label>
+        <input name="password" type="password" placeholder="Enter security passkey" required />
+
+        <button type="submit">Authenticate</button>
+      </form>
+
+      <p class="warning-text">
+        Warning: This system is under active surveillance.
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
