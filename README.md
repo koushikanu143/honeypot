@@ -1,4 +1,4 @@
-\# Honeypot Setup
+Honeypot Setup
 
 
 
@@ -6,11 +6,11 @@ A beginner-friendly cybersecurity project that demonstrates how to build and run
 
 
 
----
 
 
 
-\## Project Overview
+
+Project Overview
 
 
 
@@ -20,69 +20,44 @@ A honeypot is a decoy system used in cybersecurity to detect, observe, and analy
 
 This project is useful for students, beginners, and internship demonstrations because it shows practical concepts such as:
 
-\- network listening
-
-\- fake service simulation
-
-\- attacker interaction logging
-
-\- basic security monitoring
+ network listening
+ fake service simulation
+ attacker interaction logging
+ basic security monitoring
 
 
 
----
 
 
 
-\## Features
+ Features
 
 
 
-\- Simple Python-based honeypot
-
-\- Monitors incoming connection attempts
-
-\- Records fake login usernames and passwords
-
-\- Saves logs in a text file
-
-\- Easy to understand for beginners
-
-\- Good for cybersecurity mini project demonstration
+ Simple Python-based honeypot
+ Monitors incoming connection attempts
+ Records fake login usernames and passwords
+ Saves logs in a text file
+ Easy to understand for beginners
+ Good for cybersecurity mini project demonstration
 
 
 
----
 
 
 
-\## Technologies Used
+
+ Technologies Used
 
 
 
-\- Python 3
-
-\- Socket Programming
-
-\- File Handling
+ Python 3
+ Socket Programming
+ File Handling
 
 
 
----
 
 
 
-\## Project Structure
-
-
-
-```text
-
-honeypot-setup/
-
-│── honeypot.py
-
-│── honeypot\_log.txt
-
-│── README.md
 
