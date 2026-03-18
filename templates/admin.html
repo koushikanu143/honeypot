@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-
-<title>Honeypot Dashboard</title>
-
-<link rel="stylesheet" href="/static/style.css">
-
-<script src="/static/script.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Honeypot Control Center</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <script src="/static/script.js" defer></script>
 </head>
+<body class="admin-body">
 
-<body>
+  <div class="cyber-grid"></div>
+  <div class="scanline"></div>
 
-<h2>Honeypot Attack Dashboard</h2>
+  <div class="admin-wrapper">
+    <div class="admin-header">
+      <div>
+        <p class="panel-tag">Threat Monitoring Dashboard</p>
+        <h1>HONEYPOT CONTROL CENTER</h1>
+        <p class="admin-subtitle">
+          Real-time monitoring interface for suspicious login activity and demo event logs.
+        </p>
+      </div>
+      <a href="/" class="back-btn">Return to Login Page</a>
+    </div>
 
-<table border="1" id="logtable">
+    <div class="stats-grid">
+      <div class="stat-box">
+        <span class="stat-label">System Status</span>
+        <strong>ACTIVE</strong>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Threat Logging</span>
+        <strong>ENABLED</strong>
+      </div>
+      <div class="stat-box">
+        <span class="stat-label">Monitoring Mode</span>
+        <strong>LIVE</strong>
+      </div>
+    </div>
 
-<tr>
-<th>Time</th>
-<th>IP</th>
-<th>Username</th>
-<th>Password</th>
-<th>Browser</th>
-</tr>
-
-</table>
+    <div class="table-shell">
+      <table id="logtable">
+        <tr>
+          <th>Timestamp</th>
+          <th>Source IP</th>
+          <th>Operator ID</th>
+          <th>Browser Signature</th>
+        </tr>
+      </table>
+    </div>
+  </div>
 
 </body>
 </html>
